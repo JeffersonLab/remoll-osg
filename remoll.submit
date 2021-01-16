@@ -1,0 +1,21 @@
+universe = vanilla
+executable = job.sh
+
+# arguments = runexample.mac
+# transfer_input_files = runexample.mac
+
+Requirements = HAS_SINGULARITY == TRUE
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll:develop"
+
+# store the output, error and log files as:
+error = log/error.$(Cluster).$(Process)
+output = log/output.$(Cluster).$(Process)
+log = log/log.$(Cluster).$(Process)
+
+# request resources
+request_cpus = 1
+request_memory = 10 GB
+request_disk = 10 GB
+
+# number of jobs to run
+queue 1
