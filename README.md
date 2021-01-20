@@ -8,5 +8,12 @@ Job scripts for submission of remoll jobs to Open Science Grid
 mkdir log 
 
 # submit the job
-condor_submit remoll_submit 
+condor_submit remoll.submit 
+```
+
+## Outputs
+The outputs are saved as file.JobCluster.JobProcess:
+```shell script
+ls log/ # error.7692511.0 log.7692511.0 output.7692511.0
+ls      # remollout.7692511.0.root (and other stuff!)
 ```
