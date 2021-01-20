@@ -1,5 +1,6 @@
 universe = vanilla
 executable = job.sh
+arguments = $(Cluster) $(Process)
 
 # arguments = runexample.mac
 # transfer_input_files = runexample.mac

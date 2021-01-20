@@ -3,10 +3,10 @@ Job scripts for submission of remoll jobs to Open Science Grid
 
 ## Usage
 ```shell script
-# directory to store the output and error files
+# directories to store the output and log files
 # not doing this will cause the job to be held
-mkdir log 
+mkdir log
 
 # submit the job
-condor_submit remoll_submit 
+condor_submit remoll.submit 
 ```
