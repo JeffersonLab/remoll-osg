@@ -8,7 +8,7 @@ Job scripts for submission of remoll jobs to Open Science Grid
 mkdir log 
 
 # submit the job
-condor_submit remoll.submit 
+condor_submit submit 
 ```
 
 ## Outputs

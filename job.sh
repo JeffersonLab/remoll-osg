@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source /etc/profile
-remoll macros/runexample.mac
-cp remollout.root remollout.$1.$2.root
-rm remollout.root
+source /jlab/remoll/bin/remoll.sh
+
+remoll /srv/remollSim.mac
+mv remollout.root remollout.$1.$2.root
