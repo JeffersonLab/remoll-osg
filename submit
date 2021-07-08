@@ -15,8 +15,8 @@ log = log/log.$(Cluster).$(Process)
 
 # request resources
 request_cpus = 1
-request_memory = 4 GB
-request_disk = 1 GB
+request_memory = 10 GB
+request_disk = 10 GB
 
 # number of jobs to run
 queue 1
