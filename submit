@@ -2,7 +2,7 @@ universe = vanilla
 executable = job.sh
 arguments = $(Cluster) $(Process)
 
-transfer_input_files = remollSim.mac
+transfer_input_files = runexample.mac
 transfer_output_files = remollout.$(Cluster).$(Process).root
 
 Requirements = HAS_SINGULARITY == TRUE
@@ -14,7 +14,7 @@ output = log/output.$(Cluster).$(Process)
 log = log/log.$(Cluster).$(Process)
 
 # request resources
-request_cpus = 4
+request_cpus = 1
 request_memory = 10 GB
 request_disk = 10 GB
 

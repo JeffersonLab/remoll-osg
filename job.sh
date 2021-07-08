@@ -3,5 +3,5 @@
 source /etc/profile
 source /jlab/remoll/bin/remoll.sh
 
-remoll /srv/remollSim.mac
+remoll /srv/runexample.mac
 mv remollout.root remollout.$1.$2.root
