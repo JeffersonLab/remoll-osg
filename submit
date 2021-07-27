@@ -3,18 +3,17 @@ executable = job.sh
 arguments = $(Cluster) $(Process)
 
 transfer_input_files = runexample.mac
-transfer_output_files = remollout.$(Cluster).$(Process).root
-
-Requirements = HAS_SINGULARITY == TRUE
-+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll:develop"
 
 # store the output, error and log files as:
 error = log/error.$(Cluster).$(Process)
 output = log/output.$(Cluster).$(Process)
 log = log/log.$(Cluster).$(Process)
 
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll:develop"
+Requirements = HAS_SINGULARITY == TRUE
+
 # request resources
-request_cpus = 1
+request_cpus = 4
 request_memory = 10 GB
 request_disk = 10 GB
 

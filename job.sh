@@ -3,5 +3,7 @@
 source /etc/profile
 source /jlab/remoll/bin/remoll.sh
 
-remoll /srv/runexample.mac
-mv remollout.root remollout.$1.$2.root
+remoll /srv/remollSim.mac
+mv /srv/remollout.root /srv/remollout.$1.$2.root
+
+stashcp /srv/remollout.$1.$2.root stash:///osgconnect/public/yug/remollOutput/remollout.$1.$2.root
