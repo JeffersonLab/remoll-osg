@@ -7,6 +7,9 @@ Job scripts for submission of remoll jobs to Open Science Grid
 # not doing this will cause the job to be held
 mkdir log 
 
+# Also, edit the job file to stash the final
+# output to YOUR public directory
+
 # submit the job
 condor_submit submit 
 ```
