@@ -1,6 +1,7 @@
 universe = vanilla
 executable = job.sh
 arguments = $(Cluster) $(Process)
+environment = osgName=$ENV(USER)
 
 transfer_input_files = runexample.mac
 
@@ -10,10 +11,10 @@ output = log/output.$(Cluster).$(Process)
 log = log/log.$(Cluster).$(Process)
 
 +SingularityImage = "/cvmfs/singularity.opensciencegrid.org/jeffersonlab/remoll:develop"
-Requirements = HAS_SINGULARITY == TRUE
+Requirements = (HAS_SINGULARITY == TRUE)
 
 # request resources
-request_cpus = 4
+request_cpus = 1
 request_memory = 10 GB
 request_disk = 10 GB
 
