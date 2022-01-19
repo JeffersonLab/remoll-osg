@@ -1,7 +1,7 @@
 universe = vanilla
 executable = job.sh
 # arguments = $(Cluster) $(Process)
-arguments = $(Cluster) $(Process) cameron_dose_branch detectorDaughter.gdml
+arguments = $(Cluster) $(Process) JeffersonLab cameron_dose_branch detectorDaughter.gdml
 environment = osgName=$ENV(USER)
 
 transfer_input_files = runexample.mac
