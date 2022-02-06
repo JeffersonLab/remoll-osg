@@ -41,7 +41,7 @@ watch -n1 condor_q
 ```
 
 ## Submitting a job with custom geometry
-There should be a commented line in the `submit` file that passes some arguments to the job script `job.sh`, with an optional third argument:
+The following (commented out) line in the `submit` file passes some arguments to the job script `job.sh`, with an optional third argument:
 ```shell
 arguments = $(Cluster) $(Process) jeffersonlab/remoll:RotatedPionDetectorSystem
 ```
@@ -52,4 +52,10 @@ The outputs are saved as `file.JobCluster.JobProcess` and stored in the `/public
 ```
 ls log/                             # error.7692511.0 log.7692511.0 output.7692511.0
 ls /public/<user>/remollOutput/     # remollout.7692511.0.root
+```
+
+## Local/offline analysis of output through `stashcp`
+The following command can be used to download any file from OSG to your local storage:
+```shell
+stashcp stash:///osgconnect/public/<user>/remollOutput/<outputFile> .
 ```
