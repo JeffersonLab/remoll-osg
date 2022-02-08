@@ -33,16 +33,29 @@ Disk utilization for <user>:
 
 ## Submitting/Monitoring a job
 ```shell
-# Submit job
+# Submit job:
 condor_submit submit
 
 # Monitor jobs:
 watch -n1 condor_q
 ```
 
+## Submitting a job with custom geometry
+The following (commented out) line in the `submit` file passes some arguments to the job script `job.sh`, with an optional third argument:
+```shell
+arguments = $(Cluster) $(Process) jeffersonlab/remoll:RotatedPionDetectorSystem
+```
+The third argument is of the form `{owner}/remoll:{branch_name}`, using it will allow you to clone any fork of `remoll` and also specify a branch to switch to.
+
 ## Outputs
 The outputs are saved as `file.JobCluster.JobProcess` and stored in the `/public/<user>/remollOutput` directory:
 ```
 ls log/                             # error.7692511.0 log.7692511.0 output.7692511.0
 ls /public/<user>/remollOutput/     # remollout.7692511.0.root
+```
+
+## Local/offline analysis of output through `stashcp`
+The following command can be used to download any file from OSG to your local storage:
+```shell
+stashcp stash:///osgconnect/public/<user>/remollOutput/<outputFile> .
 ```

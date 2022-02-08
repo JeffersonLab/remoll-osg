@@ -1,6 +1,7 @@
 universe = vanilla
 executable = job.sh
 arguments = $(Cluster) $(Process)
+# arguments = $(Cluster) $(Process) jeffersonlab/remoll:RotatedPionDetectorSystem
 environment = osgName=$ENV(USER)
 
 transfer_input_files = runexample.mac
